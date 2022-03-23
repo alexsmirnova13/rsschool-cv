@@ -1,2 +1,3 @@
 # rsschool-cv
-ololo
+
+https://alexsmirnova13.github.io/rsschool-cv/
