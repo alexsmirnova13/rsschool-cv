@@ -1,5 +1,3 @@
 # rsschool-cv
 
-Smirnova CV
-
-ваыва
+https://alexsmirnova13.github.io/rsschool-cv/
