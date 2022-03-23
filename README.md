@@ -1,2 +1,3 @@
 # rsschool-cv
-ololo
+
+Smirnova CV
