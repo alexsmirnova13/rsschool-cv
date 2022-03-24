@@ -4,9 +4,9 @@
 
 ## Contacts
 
-Telegram | @Alexrusty13
-Discord | Yadviga#8124
-[LinkedIn](https://www.linkedin.com/in/asmirnova131194/)
+- Telegram | @Alexrusty13
+- Discord | Yadviga#8124
+- [LinkedIn](https://www.linkedin.com/in/asmirnova131194/)
 
 ## Summary
 
