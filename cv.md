@@ -1,9 +1,77 @@
 ![Smirnova A.](https://avatars.githubusercontent.com/u/100535240?v=4)
 
-#Smirnova Aleksandra
+# Smirnova Aleksandra
 
-##Contacts
-![LinkedIn](http://toplogos.ru/images/logo-linkedin.jpg) { width=50% }
-![GitHub](https://www.seekpng.com/png/detail/192-1923013_transparent-png-github-logo.png)
-![discord](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYkOcIx_pSP-fTAOHSzXNWefKE492GWMnKuAcw8F9Fv66Q78HDtf6pzcP0FaM3VlQ-w&usqp=CAU)
-![telegram](https://thumbs.dreamstime.com/b/%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-%D0%B2%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6-%D1%80%D0%BE%D1%81%D1%81%D0%B8%D1%8F-%D0%BE%D0%B5-%D1%8F%D0%BD%D0%B2%D0%B0%D1%80%D1%8F-%D1%81%D0%B2%D0%B5%D1%82-%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%B9-171161253.jpg)
+## Contacts
+
+Telegram | @Alexrusty13
+Discord | Yadviga#8124
+[LinkedIn](https://www.linkedin.com/in/asmirnova131194/)
+
+## Summary
+
+I am studying in RS-School. Want to be a real JS programmer.
+
+## Skills
+
+- English B1/B2
+- JS
+- HTML
+- CSS
+- Python
+- React
+
+## My code
+
+This is the part of my previous project named [Pokedex](https://alexsmirnova13.github.io/allPokemons/)
+I downloaded information for Pokedex from API. There was three options. Preload for preloading all pokemons, download one pokemon by ID and downloading all pokemons.
+
+    import OnePokeStandart from '../models/OnePokeStandart';
+    import axios from 'axios';
+
+    export default class CardService {
+        static async getAll(limit = 24, page = 1) {
+            const response = await axios.get('https://pokeapi.co/api/v2/pokemon', {
+                params: {
+                    limit,
+                    offset: (page - 1) * limit,
+                },
+            });
+            const {count, results} = response.data;
+            const fullyLoaded = await Promise.all(results.map(async u => axios.get(u.url).then(resp => resp.data)));
+            const abstractedFullyLoaded = fullyLoaded.map(u => new OnePokeStandart(u));
+
+            return [abstractedFullyLoaded, count];
+        }
+
+        static async getById(id) {
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+            return response;
+        }
+
+        static async preload(count) {
+            const response = await axios.get('https://pokeapi.co/api/v2/pokemon', {
+                params: {
+                    limit: count,
+                },
+            });
+            return response;
+        }
+    }
+
+## Experience
+
+I have only home-experience of working JS-programmer. You could saw example of my code and link on my project above.
+
+## Education
+
+- SPb SUAI 2012-2016 Bachelor's degree "Transport logistic"
+- SPb SUAI 2016-2018 Master's degree "Transport logistic"
+- Internet training from EPAM-video Course
+- RS-School
+- [LearnJS](https://learn.javascript.ru/)
+
+## Not native languages
+
+- English B1/B2. Practice with non russian speaking teacher in Skyeng. A lot of video games with non russian speaking teammates.
+- French A1. Studying by myself in Duolingo.
