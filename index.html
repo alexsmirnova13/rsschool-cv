@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="headder">
+        тут будет хеддер
+    </div> -->
+    <div class="allInfo">
+        <div class="contactsImgName">
+            <img class="img" src="https://avatars.githubusercontent.com/u/100535240?s=400&u=2151dab46dcaffe34896f0305c6d7feb80a6e214&v=4" alt="my photo">
+            <div class="nameContacts">
+                <h1>Smirnova Aleksandra</h1>
+                <div>
+                    <h2>Contacts</h2>
+                    <ul>
+                        <li>Telegram | @Alexrusty13</li>
+                        <li>Discord | Yadviga#8124</li>
+                        <li><a href="https://www.linkedin.com/in/asmirnova131194/">LinkedIn</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <hr>
+        <h2>Summary</h2>
+        <p>I am studying in RS-School. Want to be a real JS programmer.</p>
+        <h2>Skills</h2>
+        <div class="ul">
+            <li>English B1/B2</li>
+            <li>JS</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>Python</li>
+        </div>
+        <h2>My code</h2>
+        <p>This is the part of my previous project named <a href="https://alexsmirnova13.github.io/allPokemons/">Pokedex.</a>
+            I downloaded information for Pokedex from API. There was three options. Preload for preloading all pokemons, download one pokemon by ID and downloading all pokemons.</p>
+           
+        <pre><code>
+import OnePokeStandart from '../models/OnePokeStandart';
+import axios from 'axios';
+        
+export default class CardService {
+    static async getAll(limit = 24, page = 1) {
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon', {
+            params: {
+                limit,
+                offset: (page - 1) * limit,
+            },
+        });
+        const {count, results} = response.data;
+        const fullyLoaded = await Promise.all(results.map(async u => axios.get(u.url).then(resp => resp.data)));
+        const abstractedFullyLoaded = fullyLoaded.map(u => new OnePokeStandart(u));
+
+        return [abstractedFullyLoaded, count];
+    }
+
+    static async getById(id) {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        return response;
+    }
+
+    static async preload(count) {
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon', {
+            params: {
+                limit: count,
+            },
+        });
+        return response;
+    }
+}
+        </code></pre>
+
+    <h2>Experience</h2>
+    <p>I have only home-experience of working JS-programmer. You could saw example of my code and link on my project above.</p>
+    <h2>Education</h2>
+    <div class="ul">
+        <li>SPb SUAI 2012-2016 Bachelor's degree "Transport logistic"</li>
+        <li>SPb SUAI 2016-2018 Master's degree "Transport logistic"</li>
+        <li>Internet training from EPAM-video Course</li>
+        <li>RS-School</li>
+        <li><a href="https://learn.javascript.ru/">LearnJS</a></li>
+    </div>
+    <h2>Not native languages</h2>
+    <div class="ul">
+        <li>English B1/B2. Practice with non russian speaking teacher in Skyeng. A lot of video games with non russian speaking teammates.</li>
+        <li>French A1. Studying by myself in Duolingo.</li>
+    </div>
+</div>
+
+    <!-- <div class="footer">
+        тут будет футер
+    </div> -->
+
+    
+</body>
+</html>

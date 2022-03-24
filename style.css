@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.headder {
+    background-color: aquamarine;
+    height: 40px;
+}
+
+.footer {
+    background-color: rgb(113, 83, 224);
+    height: 40px;
+}
+
+.allInfo {
+    background-color: lightgreen;
+}
+
+.img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.contactsImgName {
+    display: flex;
+}
+
+.nameContacts {
+    /* display: flex; */
+    margin-left: 100px;
+}
