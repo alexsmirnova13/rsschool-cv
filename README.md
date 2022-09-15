@@ -80,3 +80,4 @@ I have only home-experience of working JS-programmer. You could saw example of m
 - English B1/B2. Practice with non russian speaking teacher in Skyeng. A lot of video games with non russian speaking teammates.
 - French A1. Studying by myself in Duolingo.
 - Turkish A1. Studying by myself in Duolingo. And trying to talk to people in the street :D
+
