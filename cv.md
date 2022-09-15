@@ -1,5 +1,3 @@
-## You can find my cv [here](https://alexsmirnova13.github.io/rsschool-cv/cv) or below
-
 ![Smirnova A.](https://avatars.githubusercontent.com/u/100535240?v=4)
 
 # Smirnova Aleksandra
@@ -72,7 +70,7 @@ I have only home-experience of working JS-programmer. You could saw example of m
 - SPb SUAI 2012-2016 Bachelor's degree "Transport logistic"
 - SPb SUAI 2016-2018 Master's degree "Transport logistic"
 - Internet training from EPAM-video Course
-- [RS-School](https://rs.school/)
+- RS-School
 - [LearnJS](https://learn.javascript.ru/)
 
 ## Not native languages
@@ -80,4 +78,3 @@ I have only home-experience of working JS-programmer. You could saw example of m
 - English B1/B2. Practice with non russian speaking teacher in Skyeng. A lot of video games with non russian speaking teammates.
 - French A1. Studying by myself in Duolingo.
 - Turkish A1. Studying by myself in Duolingo. And trying to talk to people in the street :D
-
